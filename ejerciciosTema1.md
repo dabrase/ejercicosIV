@@ -20,6 +20,32 @@ Precio del servidor = 999€ . 26% de 999€  = 259,74€
 
 ## Ejercicio 2. Usando las tablas de precios de servicios de alojamiento en Internet y de proveedores de servicios en la nube, Comparar el coste durante un año de un ordenador con un procesador estándar (escogerlo de forma que sea el mismo tipo de procesador en los dos vendedores) y con el resto de las características similares (tamaño de disco duro equivalente a transferencia de disco duro) en el caso de que la infraestructura comprada se usa sólo el 1% o el 10% del tiempo.
 
+He comparado el servicio en la nube de Microsoft Azure (instancia 7) https://azure.microsoft.com/es-es/pricing/details/cloud-services/
+
+-	CPU: Intel Xeon E5 (8 núcleos)
+-	RAM: 56GB 
+-	Disco: 2TB
+-	Precio: 1,1891€/hora
+
+ con el servidor dedicado Linux Level 7 de Strato https://www.strato.es/servidor-dedicado-linux/
+
+-	CPU: Intel® Xeon® E5-1650 (6 núcleos)
+-	RAM: 64GB 
+-	Disco: 4TB
+-	Precio: 189€/mes --> 189€/30 = 6,3€/dia --> 6,3€/24 = 0,2625/hora
+
+### Uso anual del 1%
+
+Azure -> 1,1891€/hora * 24h * 30dias * 1% =8,56152€/mes 
+
+Strato -> 0,2625€/hora * 24h * 30dias * 1% = 1,89€/mes  
+
+### Uso anual del 10%
+
+Azure -> 1,1891€/hora * 24h * 30dias * 10% =85,6152€/mes 
+
+Strato -> 0,2625€/hora * 24h * 30dias * 10% = 18,9€/mes  
+
 ## Ejercicio 3. 
 
 ### 1. ¿Qué tipo de virtualización usarías en cada caso? Comentar en el foro
