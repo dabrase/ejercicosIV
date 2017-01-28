@@ -11,6 +11,12 @@ curl -L https://www.opscode.com/chef/install.sh | bash
 ``
 ![imagen1](capturas/tema6/ejer1.png)
 
+Comprobar que se ha instalado:
+
+´´
+chef-solo -v
+´´
+
 ## Ejercicio 2. Crear una receta para instalar la aplicación que se viene creando en la asignatura en alguna máquina virtual o servidor en la nube.
 
 
@@ -19,7 +25,9 @@ curl -L https://www.opscode.com/chef/install.sh | bash
 
 ## Ejercicio 4. Instalar una máquina virtual Debian usando Vagrant y conectar con ella.
 
+Para instalar Vagrant ejecutamos `sudo apt-get install vagrant`
 
+![imagen2](capturas/tema6/ejer4.png)
 
 ## Ejercicio 5. Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica
 
