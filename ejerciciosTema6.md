@@ -13,9 +13,10 @@ curl -L https://www.opscode.com/chef/install.sh | bash
 
 Comprobar que se ha instalado:
 
-´´
+``
 chef-solo -v
-´´
+
+``
 
 ## Ejercicio 2. Crear una receta para instalar la aplicación que se viene creando en la asignatura en alguna máquina virtual o servidor en la nube.
 
@@ -28,6 +29,14 @@ chef-solo -v
 Para instalar Vagrant ejecutamos `sudo apt-get install vagrant`
 
 ![imagen2](capturas/tema6/ejer4.png)
+
+Instalamos la versión Debian ejecutando `vagrant box add debian http://static.gender-api.com/debian-8-jessie-rc2-x64-slim.box`
+
+![imagen2](capturas/tema6/ejer4-2.png)
+
+Ejecutamos ahora `vagrant init debian` para crear el fichero vagrantfile
+
+![imagen2](capturas/tema6/ejer4-3.png)
 
 ## Ejercicio 5. Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica
 
