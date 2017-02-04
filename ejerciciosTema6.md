@@ -13,10 +13,10 @@ curl -L https://www.opscode.com/chef/install.sh | bash
 
 Comprobar que se ha instalado:
 
-``
+```
 chef-solo -v
 
-``
+```
 
 ## Ejercicio 2. Crear una receta para instalar la aplicación que se viene creando en la asignatura en alguna máquina virtual o servidor en la nube.
 
@@ -39,6 +39,27 @@ Ejecutamos ahora `vagrant init debian` para crear el fichero vagrantfile
 ![imagen2](capturas/tema6/ejer4-3.png)
 
 ## Ejercicio 5. Crear un script para provisionar `nginx` o cualquier otro servidor web que pueda ser útil para alguna otra práctica
+
+He creado un fichero nginx.sh que tiene lo siguiente:
+
+```
+#!/bin/bash
+sudo apt-get update && apt-get install -y nginx
+sudo service nginx restart && sudo service nginx status
+```
+Se ha creado el fichero **Vagrantfile**:
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "debian"
+
+  config.vm.provision "shell",
+    path: "nginx.sh"
+end
+```
 
 ## Ejercicio 6. Configurar tu máquina virtual usando vagrant con el provisionador chef.
 
