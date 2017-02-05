@@ -78,6 +78,34 @@ pass
 
 ## Ejercicio 5. Instalar y echar a andar tu primera aplicación en Heroku.
 
+### Configuración
+
+En primer lugar nos descargamos la linea de comandos de Heroku utilizando la orden 
+
+```
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+```
+
+Para autentificarnos utilizamos `heroku login` y nos pedirá que introduzcamos **Email** y **Contraseña**
+
+![Imagen 1] (http://i65.tinypic.com/2wdya6u.png)
+
+### Implementar aplicación
+
+Para crear una aplicación en Heroku: 
+
+```
+
+ heroku apps:create --region eu NOMBRE_APP
+
+```
+Ahora ejecutamos `git push heroku master`
+
+La aplicación esta desplegada y lo sincronizaremos con Travis-CI y GitHub. Entramos a la configuración de nuestra aplicación en Heroku.
+
+![Imagen 2] (http://i65.tinypic.com/2wc4g14.png)
+
 ## Ejercicio 6. Usar como base la aplicación de ejemplo de heroku y combinarla con la aplicación en node que se ha creado anteriormente. Probarla de forma local con foreman. Al final de cada modificación, los tests tendrán que funcionar correctamente; cuando se pasen los tests, se puede volver a desplegar en heroku.
 
 ## Ejercicio 7. Haz alguna modificación a tu aplicación en node.js para Heroku, sin olvidar añadir los tests para la nueva funcionalidad, y configura el despliegue automático a Heroku usando Snap CI o alguno de los otros servicios, como Codeship, mencionados en StackOverflow
