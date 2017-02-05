@@ -28,7 +28,49 @@ Creamos un virtualenv con: `virtualenv NombreProyecto`
 
 ## Ejercicio 6. Para la aplicación que se está haciendo, escribir una serie de aserciones y probar que efectivamente no fallan. Añadir tests para una nueva funcionalidad, probar que falla y escribir el código para que no lo haga (vamos, lo que viene siendo TDD).
 
+Para comprobar si hay ciudades
+
+```
+	total = funciones_bd.cuentaCiudades()
+    self.assertNotEqual(total, 0)
+```
+Comprobar ciudad con una temperatura concreta
+
+```
+	ciudad_disponible = funciones_bd.ciudades("SELECT * FROM ciudades WHERE temperatura='10'")
+	self.assertIsNotNone(ciudad_disponible)
+```
+Con los archivos ya creados, ejecutamos `python manage.py test`
+
 ## Ejercicio 7. Convertir los tests unitarios anteriores con assert a programas de test y ejecutarlos desde mocha, usando descripciones del test y del grupo de test de forma correcta. Si hasta ahora no has subido el código que has venido realizando a GitHub, es el momento de hacerlo, porque lo vas a necesitar un poco más adelante.
+
+Archivo test_bd.py
+
+```
+import unittest
+import funciones_bd
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_existe_ciudades(self):
+        """ Test que comprueba si hay ciudades disponibles. """
+        total = funciones_bd.cuentaCiudades()
+        self.assertNotEqual(total, 0)
+
+    def test_nombre_ciudad(self):
+        """ Test que devuelve true si hay una ciudad con una temperatura concreta. """
+        ciudad_disponible = funciones_bd.ciudades("SELECT * FROM ciudades WHERE temperatura='10'")
+        self.assertIsNotNone(ciudad_disponible)
+
+    def test_temperatura_ciudad(self):
+        """ Test que devuelve true si el nombre de la ciudad coincide"""
+        nombre = funciones_bd.ciudades("SELECT ciudad FROM ciudades WHERE ciudad='granada'")
+        self.assertEqual(nombre, "granada\n")
+
+```
+Para ver que funcionan los test: `python test_bd.py`
+
+![](capturas/tema2/ejer7.png)
 
 ## Ejercicio 8. Haced los dos primeros pasos antes de pasar al tercero.
 
