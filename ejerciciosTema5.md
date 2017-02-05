@@ -9,11 +9,11 @@ Para instalar KVM se hace mediante el siguiente comando:
 ```
 aptitude install qemu-kvm libvirt-bin
 ```
-![](capturas/tema5/ejer1)
+![](capturas/tema5/ejer1.png)
 
 Ahora comprobamos si nuestro sistema esta preparado para ejecutarlo con la orden **kvm-ok**
 
-![](capturas/tema5/ejer1-1)
+![](capturas/tema5/ejer1-1.png)
 
 ## Ejercicio 2. 
 
